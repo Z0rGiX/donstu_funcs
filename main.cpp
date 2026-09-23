@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include "funcline.h"
+#include "funcfastosc.h"
 
 int main() {
   std::cout << "Func test example" << std::endl;

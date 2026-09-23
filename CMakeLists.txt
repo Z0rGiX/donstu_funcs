@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(math_funcs main.cpp
     functemplate.h
-    funcline.h)
+    funcline.h
+funcfastosc.h)
 
 include(GNUInstallDirs)
 install(TARGETS math_funcs
