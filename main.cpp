@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include "funcline.h"
+#include "funcfastosc.h"
 
 int main() {
   std::cout << "Func test example" << std::endl;
@@ -18,5 +19,23 @@ int main() {
   for(size_t i = 0; i < res.size(); ++i){
     std::cout << "y(" << std::setw(4) << res[i].first << ") = " << res[i].second << std::endl;
   }
+      std::cout << "\n--- Testing FuncFastOsc ---" << std::endl;
+    // По условию: a = 1, b = 1
+    std::vector<double> k_osc = {1.0, 1.0}; 
+    FuncFastOsc fastOsc(k_osc);
+
+    std::cout << "Manual mode (FuncFastOsc)" << std::endl;
+    // Проверим значения вблизи нуля и в нуле
+    double test_vals[] = {-1.0, -0.5, -0.1, 0.0, 0.1, 0.5, 1.0};
+    for(double x : test_vals){
+        std::cout << "y(" << std::setw(4) << x << ") = " << fastOsc.calc(x) << std::endl;
+    }
+
+    std::cout << "All array mode (FuncFastOsc)" << std::endl;
+    // Шаг 0.2, чтобы увидеть колебания. Обратите внимание: около нуля они очень частые.
+    auto res_osc = fastOsc.calcAll(-2.0, 0.2, 2.0);
+    for(size_t i = 0; i < res_osc.size(); ++i){
+        std::cout << "y(" << std::setw(4) << res_osc[i].first << ") = " << res_osc[i].second << std::endl;
+    }
   return 0;
 }
