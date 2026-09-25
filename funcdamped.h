@@ -8,7 +8,7 @@ private:
     double b;
 
 public:
-    // Конструктор по умолчанию 
+
     FuncDamped(double a_val = 1.0, double b_val = 1.0) : a(a_val), b(b_val) {}
 
     // Метод вычисления значения функции
