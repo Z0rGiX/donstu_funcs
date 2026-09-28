@@ -10,6 +10,7 @@ add_executable(math_funcs main.cpp
     functemplate.h
     funcline.h
     funcfastosc.h
+    funcquartic.h
     funcarctan.h
     funcmodul.h
 )
