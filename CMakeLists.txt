@@ -5,11 +5,18 @@ project(math_funcs LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+
 add_executable(math_funcs main.cpp
     functemplate.h
     funcline.h
-funcfastosc.h
-funcdamped.h)
+    funcfastosc.h
+    funcdamped.h
+    funcquartic.h
+    funcarctan.h
+    funcmodul.h
+)
+
 
 include(GNUInstallDirs)
 install(TARGETS math_funcs
