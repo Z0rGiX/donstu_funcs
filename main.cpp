@@ -46,7 +46,7 @@ int main() {
     }
     // --- Testing FuncDamped ---
     std::cout << "\n--- Testing FuncDamped ---" << std::endl;
-    FuncDamped func21(1.0, 1.0);
+    FuncDamped func21({1.0, 1.0})
     double x = 0.5;
     std::cout << "y = " << func21.calc(x) << " at x = " << x << std::endl;
 
